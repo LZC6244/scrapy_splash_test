@@ -24,8 +24,8 @@ class TestSpider(scrapy.Spider):
 
     # start request
     def start_requests(self):
-        # yield SplashRequest(self.url, callback=self.parse, endpoint='execute', args={'lua_source': script})
-        yield SplashRequest(self.url, callback=self.parse)
+        yield SplashRequest(self.url, callback=self.parse, endpoint='execute', args={'lua_source': script})
+        # yield SplashRequest(self.url, callback=self.parse)
 
     # parse the html content
     def parse(self, response):
